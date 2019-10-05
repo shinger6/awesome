@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+/* ===================================================================
+モジュール
+=================================================================== */
+
+
+/* リンク
+--------------------------------------------------------------------*/
+a {
+	transition: color 0.2s ease;
+}
+
+.hover {
+	background: #fff;
+	transition: all 0.2s ease;
+}
+
+.hover:hover {
+	opacity: 0.7;
+}
+
+
+/* 下からフェードイン
+--------------------------------------------------------------------*/
+.fadeIn {
+	opacity: 1;
+	display: block;
+	transition: all 1s cubic-bezier(0.48, 0.18, 0, 0.98);
+}
+
+.fadeIn--L { transform: translateX(-40px); }
+.fadeIn--R { transform: translateX(40px); }
+.fadeIn--B { transform: translateY(40px); }
+
+.fadeIn__on {
+	transform: translate3d(0,0,0);
+	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	/* SPのときはフェードイン処理なし */
+	.fadeIn {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	.fadeIn__on {
+		transform: none;
+	}
+}
+
+
+/* 共通ボタン
+--------------------------------------------------------------------*/
+/* リンクボタン */
+.button {
+	text-align: center;
+	margin: 30px auto 0;
+	position: relative;
+}
+
+.button > a {
+	display: inline-block;
+	background: #14a0dc;
+	color: #fff !important;
+	text-align: center;
+	position: relative;
+	padding: 10px 20px 10px 30px;
+	transition: all 0.3s ease;
+	border: 1px solid #14a0dc;
+	text-align: center;
+	z-index: 1;
+}
+
+.button > a:hover {
+	opacity: 1;
+	color: #333 !important;
+	border: 1px solid #c4e7f6;
+}
+
+.button > a::before {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background:	url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/ico_btn_off.png) no-repeat 50% 50%;
+	margin: 0 10px 0 -7px;
+	background-size: 11px 11px;
+}
+
+.button > a::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	display: block;
+	transition: all 0.3s ease;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.button > a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+.button > a:hover::before {
+	content: "";
+	display: inline-block;
+	background:	url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/ico_btn_on.png) no-repeat 50% 50%;
+	background-size: 11px 11px;
+}
+
+.button--top {
+	margin-top: 40px;
+}
+
+.button--top > a {
+	padding: 10px 90px 10px 100px;
+}
+
+.button--top--white > a {
+	background: #fff;
+	color: #333 !important;
+	border: 1px solid #fff;
+}
+
+.button--top--white > a:hover {
+	color: #fff!important;
+}
+
+.button--top--white > a::before {
+	background:	url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/ico_btn_on.png) no-repeat 50% 50%;
+	background-size: 11px 11px;
+}
+
+.button--top--white > a::after {
+	background: #14a0dc;
+}
+
+.button--top--white > a:hover::before {
+	background:	url(/common/img/ico_btn_off.png) no-repeat 50% 50%;
+	background-size: 11px 11px;
+}
+
+/* アンカーボタン */
+.nav {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.navItem {
+	margin: 0 15px;
+}
+
+.navItem > a {
+	display: block;
+	border-radius: 3px;
+	margin: 3px 0;
+	padding: 8px 2em 8px 3em;
+	font-size: 1.4rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	background: #fff;
+	transition: all 0.2s ease;
+}
+
+.navItem > a::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin: 0 10px 0 -1em;
+	border-top: 2px solid #14a0dc;
+	border-right: 2px solid #14a0dc;
+	transform: rotate(135deg);
+	transition: all 0.2s ease;
+	margin-bottom: 2px;
+}
+
+.navItem a:hover {
+	color: #fff;
+	background: #14a0dc;
+}
+
+.navItem > a:hover::before {
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+	.button {
+		margin: 30px auto 0;
+	}
+
+	.button > a {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		font-size: 1.2rem;
+	}
+
+	.button > a:hover {
+		color: #fff !important;
+		border-color: #14a0dc;
+	}
+
+	.button > a::after {
+		display: none !important;
+	}
+
+	.button--top--white > a:hover {
+		color: #333!important;
+		border-color: #fff;
+	}
+
+	.nav {
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	.navItem {
+		margin: 5px 0;
+	}
+
+	.navItem a {
+		display: block;
+		margin: 0;
+		padding: 1rem 2rem;
+		text-align: left;
+	}
+
+	.navItem a:hover {
+		color: #333;
+		background: #fff;
+	}
+
+	.navItem > a::before {
+		content: "";
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		margin: 0 10px 0 auto;
+		border-top: 2px solid #14a0dc;
+		border-right: 2px solid #14a0dc;
+		transform: rotate(135deg);
+		transition: none;
+		margin-bottom: 2px;
+	}
+
+	.navItem > a:hover::before {
+		border-top: 2px solid #14a0dc;
+		border-right: 2px solid #14a0dc;
+	}
+}
+
+
+/* フォント
+--------------------------------------------------------------------*/
+.size60 { font-size: 40px; }
+.size30 { font-size: 22px; }
+.size28 { font-size: 20px; }
+.size24 { font-size: 18px; }
+.size20 { font-size: 16px; }
+.size18 { font-size: 15px; }
+.size16 { font-size: 14px; }
+
+@media (min-width: 480px) {
+	.size60 { font-size: calc(40px + 20 * ((100vw - 480px) / 520)); }
+	.size30 { font-size: calc(22px + 8 * ((100vw - 480px) / 520)); }
+	.size28 { font-size: calc(20px + 8 * ((100vw - 480px) / 520)); }
+	.size24 { font-size: calc(18px + 6 * ((100vw - 480px) / 520)); }
+	.size20 { font-size: calc(16px + 4 * ((100vw - 480px) / 520)); }
+	.size18 { font-size: calc(15px + 3 * ((100vw - 480px) / 520)); }
+	.size16 { font-size: calc(14px + 2 * ((100vw - 480px) / 520)); }
+}
+
+@media (min-width: 1000px) {
+	.size60 { font-size: 60px; }
+	.size30 { font-size: 30px; }
+	.size28 { font-size: 28px; }
+	.size24 { font-size: 24px; }
+	.size20 { font-size: 20px; }
+	.size18 { font-size: 18px; }
+	.size16 { font-size: 16px; }
+}
+
+.en { font-family: 'Josefin Sans'; }
+
+
+/* 見出し
+--------------------------------------------------------------------*/
+.heading {
+	margin: 0 0 1rem 0;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.titleHeding {
+	font-weight: 500;
+	text-align: center;
+}
+
+.titleHeding::after{
+	content: '';
+	display: block;
+	margin: 15px auto 40px;
+	width: 10%;
+	height: 3px;
+	background-color: #14a0dc;
+}
+
+.secTxt {
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.titleHeding::after{
+		margin: 10px auto 20px;
+	}
+
+	.secTxt { text-align: left; }
+	.secTxt br { display: none; }
+}
+
+
+/* table
+--------------------------------------------------------------------*/
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin: 40px 0;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+.table tr > th,
+.table tr > td {
+	padding: 15px;
+	line-height: 1.4;
+	vertical-align: top;
+	background: #fff;
+}
+
+.table tr > th {
+	background-color: #E7F9FF;
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+	.table {
+		margin: 20px 0;
+	}
+
+	.table tr > th,
+	.table tr > th,
+	.table tr > td,
+	.table tr > td {
+		padding: 1rem;
+	}
+}
+
+/* dlテーブル */
+.dltable {
+	border-bottom: 1px solid #DDD;
+}
+
+.dltable dl {
+	border-bottom: 1px solid #DDD;
+}
+
+.dltable dt {
+	display: inline;
+	float: left;
+	width: 230px;
+	margin: 0;
+	padding: 15px;
+	border-top: 1px solid #DDD;
+}
+
+.dltable dd {
+	margin: 0 0 0 230px;
+	padding: 15px;
+	border-top: 1px solid #DDD;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.dltable {
+		border: 1px solid #DDD;
+	}
+
+	.dltable dt {
+		font-weight: 500;
+		display: block;
+		float: none;
+		width: 100%;
+		padding: 1rem;
+		border: none;
+		background: #14a0dc;
+		color: #fff;
+	}
+
+	.dltable dd {
+		margin: 0;
+		background: #fff;
+		border: none;
+		padding: 15px 15px 25px;
+	}
+}
+
+
+/* List
+--------------------------------------------------------------------*/
+.list-decimal {
+	margin-top: 20px;
+}
+
+.list-decimal li {
+	list-style: decimal;
+	margin-left: 2em;
+	line-height: 1.6em;
+	margin-bottom: 20px;
+}
+
+.list-decimal .list-decimal li {
+	margin-bottom: 0;
+}
+
+.list-disc {
+	margin-top: 20px;
+}
+
+.list-disc li {
+	list-style: disc;
+	margin-left: 2em;
+	line-height: 1.6em;
+	margin-bottom: 10px;
+}
+
+.list-disc .list-disc li {
+	margin-bottom: 0;
+}
+
+.list-arrow {
+	margin-top: 20px;
+}
+
+.list-arrow li {
+	background-size: 10px 10px;
+	list-style: none;
+	padding-left: 1em;
+	line-height: 1.6em;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.list-arrow li > a::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 6px;
+	height: 6px;
+	top: 8px;
+	left: 0;
+	border-top: 2px solid #0c5b7d;
+	border-right: 2px solid #0c5b7d;
+	transform: rotate(45deg);
+}
+
+
+/* ホバーでズーム
+--------------------------------------------------------------------*/
+.hoverImg__inner {
+	overflow: hidden;
+	position: relative;
+}
+
+.hoverImg__inner::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.15);
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.hoverImg__inner:hover::after {
+	opacity: 1;
+}
+
+.hoverImg img {
+	transition: all 2s linear;
+}
+
+.hoverImg:hover img {
+	transform: scale(1.1) rotate(0.1deg);
+}

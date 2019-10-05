@@ -1,0 +1,25 @@
+/* Noto Sans Japanese */
+
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 300;
+	src: url(../font/noto/NotoSansCJKjp-DemiLight.min.woff2) format('woff2');
+	src: url(../font/noto/NotoSansCJKjp-DemiLight.min.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 500;
+	src: url(../font/noto/NotoSansCJKjp-Medium.min.woff2) format('woff2');
+	src: url(../font/noto/NotoSansCJKjp-Medium.min.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 700;
+	src: url(../font/noto/NotoSansCJKjp-Bold.min.woff2) format('woff2');
+	src: url(../font/noto/NotoSansCJKjp-Bold.min.woff) format('woff');
+}

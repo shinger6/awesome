@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* ===================================================================
+インポート用
+=================================================================== */
+
+/* リセット */
+@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/reset.css");
+
+/* 共通スタイル */
+@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/base.css");
+
+/* レイアウト */
+@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/layout.css");
+
+/* モジュール */
+@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/module.css");
+
+/* 共通フッターリンク */
+@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/_sitecommon/_css/footer-link.css");
+
+/* フォント読み込み */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:500,600,700');

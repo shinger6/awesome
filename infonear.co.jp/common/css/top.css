@@ -1,0 +1,1041 @@
+@charset "utf-8";
+
+/* ===================================================================
+トップ
+=================================================================== */
+
+.topWrapper {
+	position: relative;
+}
+
+.secTtl {
+	margin-bottom: 3rem;
+	line-height: 1.1;
+	color: #999;
+	font-weight: 500;
+}
+
+.secTtl--white {
+	color: #a6d1f1;
+}
+
+.secTtl--white span {
+	color: #fff;
+}
+
+.secTtl--navy {
+	margin-right: 40px;
+}
+
+.secTtl--navy span {
+	color:#00334f;
+	font-weight: 700;
+}
+
+.secTtl--interview {
+	margin-right: 40px;
+}
+
+.secTtl span {
+	display: block;
+}
+
+.update {
+	display: inline-block;
+	position: relative;
+}
+
+.update::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	width: 10vw;
+	max-width: 135px;
+	height: 80px;
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/ico_update.png) no-repeat center / 100%;
+	top: -70px;
+	left: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+	.secTtl--navy {
+		margin-right: 0;
+	}
+
+	.update {
+		position: static;
+	}
+
+	.update::before {
+		position: static;
+		width: 100%;
+		max-width: 157px;
+		height: 45px;
+		margin-bottom: 10px;
+		background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_ico_update.png);
+	}
+}
+
+
+/* loading
+--------------------------------------------------------------------*/
+.loadScreen {
+	width: 100%;
+	width: 100vw;
+	height: 100%;
+	position: absolute;
+	background: #fff;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.loadScreen::after {
+	content: "";
+	display: block;
+	min-height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	width: 100vw;
+	position: absolute;
+	background: #14a0dc;
+	z-index: 1001;
+	top: -100%;
+	transition: top 0.6s cubic-bezier(0.75, 0, 0.175, 1) 0.1s;
+}
+
+.loadScreen--in::after {
+	top: 0;
+}
+
+.loadScreen--out::after {
+	top: -100%;
+}
+
+.loadScreen__inner {
+	position: absolute;
+	width: 400px;
+	height: 115px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 1003
+}
+
+.loadScreen__logoWrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 37.5%; /* SVG高さ / SVG幅 * 100 */
+}
+
+.loadScreen__logo {
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.loadScreen__logo path {
+	fill:#fff;
+}
+
+.subLogo {
+	opacity: 0;
+}
+
+.subLogo--on {
+	animation: subLogo 0.2s ease-in-out forwards;
+}
+
+.subLogo--01 { animation-delay: 0.7s; }
+.subLogo--02 { animation-delay: 0.725s; }
+.subLogo--03 { animation-delay: 0.75s; }
+.subLogo--04 { animation-delay: 0.775s; }
+.subLogo--05 { animation-delay: 0.8s; }
+.subLogo--06 { animation-delay: 0.825s; }
+.subLogo--07 { animation-delay: 0.85s; }
+.subLogo--08 { animation-delay: 0.875s; }
+.subLogo--09 { animation-delay: 0.9s; }
+.subLogo--10 { animation-delay: 0.925s; }
+.subLogo--11 { animation-delay: 0.95s; }
+.subLogo--12 { animation-delay: 0.975s; }
+.subLogo--13 { animation-delay: 1s; }
+.subLogo--14 { animation-delay: 1.025s; }
+.subLogo--15 { animation-delay: 1.05s; }
+
+@keyframes subLogo {
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.loadScreen__inner {
+		width: 200px;
+	}
+}
+
+
+/* movie
+--------------------------------------------------------------------*/
+.mv {
+	position: relative;
+	background: #fff;
+}
+
+.videoArea {
+	height: calc(100% - 75px);
+	height: calc(100vh - 75px);
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+#video {
+	background: url('file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_poster.jpg') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: calc(100% - 75px);
+	min-height: calc(100vh - 75px);
+	min-width: 100%;
+	min-width: 100vw;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    z-index:2000;
+	transform: translate(-50%, -50%);
+	animation: videoFadeIn 1.5s cubic-bezier(0.75, 0, 0.175, 1) forwards;
+}
+.cont{
+ display:flex;
+ justify-content:center;
+ margin: 20% 0 0;
+ z-index:2001;
+}
+.cont-inner{
+ width: 900px;
+ padding: 1px;
+ justify-content:center;
+ color: #fff;
+ z-index:2001;
+}
+
+@keyframes videoFadeIn {
+	0% { opacity: 0;}
+	100% { opacity: 1;}
+}
+
+.videoArea__scroll {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index:1;
+	animation: videoFadeIn 1.5s cubic-bezier(0.75, 0, 0.175, 1) forwards;
+}
+
+.videoArea__scroll > a {
+	position: absolute;
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	background: #fff url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_ico_skip.gif) no-repeat center 15px;
+	text-align: center;
+	top: auto;
+	right: 0;
+	bottom: 30px;
+	left: 0;
+	margin: auto;
+	padding-top: 37px;
+	font-size: 1.3rem !important;
+	letter-spacing: 0;
+	font-weight: 700;
+	transition: all 0.2s cubic-bezier(0.75, 0, 0.175, 1);
+}
+
+.videoArea__scroll > a:hover {
+	transform: scale(1.1);
+	color: #333;
+}
+
+
+/* SP MV
+--------------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+	.mv {
+		margin: 0;
+	}
+
+	.spMain {
+		display: block;
+		/*height: calc(100vh - 60px);*/
+	}
+
+	.spSlide {
+		width: 100%;
+		/*height: calc(100vh - 60px);*/
+		position: relative;
+
+	}
+
+	.spSlide__item {
+		width: 100%;
+		/*height: calc(100vh - 60px);*/
+		position: absolute;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.spSlide__item img {
+		position: absolute;
+		width: 75%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+	.spSlide__item--01 {
+		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main01.jpg");
+	}
+
+	.spSlide__item--02 {
+		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main02.jpg");
+	}
+
+	.spSlide__item--03 {
+		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main03.jpg");
+	}
+
+	.spSlide__item--04 {
+		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main04.jpg");
+	}
+
+	.spSlide__item--05 {
+		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main05.jpg");
+	}
+
+	.videoArea__scroll > a {
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		background: #fff url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_ico_skip.gif) no-repeat center 10px / 15%;
+		bottom: 20px;
+		padding-top: 30px;
+		font-size: 1rem !important;
+		transition: none;
+	}
+
+	.videoArea__scroll > a:hover {
+		transform: scale(1);
+	}
+
+}
+
+
+/* TOPICS
+--------------------------------------------------------------------*/
+.topics {
+	max-width: 40%;
+	display: flex;
+	padding: 1em;
+	align-items: center;
+	background: rgba(255,255,255,0.8);
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 2;
+}
+
+@keyframes topics {
+	0% {
+
+	}
+	100% {
+		opacity: 1;
+		right: 30px;
+	}
+}
+
+.topics__ttl {
+	margin-right: 1em;
+	color: #00334f;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+
+.topics__detail {
+	border-left: 1px solid #ccc;
+	padding-left: 1em;
+	line-height: 1.3;
+}
+
+.topics__detail > dt {
+	color: #14a0dc;
+	font-weight: 700;
+}
+
+.topics__detail > dd {
+}
+
+.topics__detail > dt:nth-child(n+2) {
+	margin-top:10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.topics {
+		max-width: 100%;
+		position: static;
+		display: block;
+		padding: 0;
+	}
+	.topics__ttl {
+		margin: 1em;
+		text-align: center;
+	}
+
+	.topics__detail {
+		border-top: 1px solid #ccc;
+		padding: 2em;
+	}
+}
+
+/* インスタ
+--------------------------------------------------------------------*/
+.insta {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.insta {
+		display: block;
+	}
+	.insta img {
+		width: 100%;
+	}
+}
+
+/* 漫画
+--------------------------------------------------------------------*/
+.banner__comics {
+	display: block;
+	position: absolute;
+	top: -170px;
+	right:20px;
+	z-index: 3;
+}
+
+.banner__comics img{
+	transition: transform 0.2s ease-in-out;
+	filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+	width: 194px;
+	height: 191px;
+}
+
+.banner__comics img:hover{
+	transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+
+	.banner__comics{
+		position: relative;
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+
+	.banner__comics img{
+		filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+		width: 100%;
+		height: 100%;
+	}
+
+	.banner__comics img:hover{
+		transform: none;
+	}
+}
+
+
+/* ピックアップ
+--------------------------------------------------------------------*/
+.pickup {
+	padding: 70px 40px;
+}
+
+.pickupList {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.pickupList__item {
+	width: 100%;
+	max-width: 313px;
+	margin-right: 30px;
+}
+
+.pickupList__item:last-of-type {
+	margin-right: 0;
+}
+
+.pickupList__item div {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.pickupList__item__img {
+	border: 1px solid #ddd;
+}
+
+.pickupList__item a:hover {
+	color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+	.pickup {
+		padding: 40px 20px;
+	}
+
+	.pickupList {
+		display: block;
+		max-width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.pickupList__item {
+		max-width: 100%;
+		margin: 0 0 20px 0;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.pickupList__item:last-of-type {
+		border: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	.pickupList__item a {
+		display: flex;
+	}
+
+	.pickupList__item div:first-of-type {
+		margin-right: 20px;
+	}
+
+	.pickupList__item__img {
+		border: none;
+	}
+
+	.pickupList__item__img img {
+		border: 1px solid #ddd;
+	}
+}
+
+
+
+/* コンセプト
+--------------------------------------------------------------------*/
+.concept2 {
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/concept_bg2.jpg) center top / cover no-repeat;
+	color: #fff;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.conceptDtl {
+	margin: 0 0 60px0;
+}
+
+.conceptDtl__logoarea {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.conceptDtl__logoarea__logo {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.conceptDtl__logoarea__teichaku {
+	display: inline-block;
+	margin: 40px 0 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.conceptDtl__logoarea__teichaku:hover {
+	opacity: 0.5;
+}
+
+.conceptDtl__copy {
+	margin: 0 auto 30px;
+}
+
+.conceptDtl p {
+	padding-bottom: 1.5em;
+	letter-spacing: 0.2rem;
+	line-height: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+	.concept {
+		background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_concept_bg.jpg) center / cover no-repeat;
+		display: block;
+		margin-bottom: 0;
+		padding: 40px 0;
+	}
+
+	.conceptDtl {
+		text-align: left;
+		margin: 0 20px;
+		padding-left: 0;
+	}
+
+	.conceptDtl p {
+		padding-bottom: 1em;
+		letter-spacing: 0;
+		line-height: 1.8em;
+	}
+
+	.conceptDtl__logoarea {
+		display: block;
+		text-align: center;
+		margin: 0 auto 40px;
+	}
+
+	.conceptDtl__logoarea__logo {
+		margin: 0 auto;
+		width: 70%;
+	}
+
+	.conceptDtl__logoarea__teichaku {
+		margin: 40px 0 0 0;
+	}
+
+	.conceptDtl__copy {
+		width: 80%;
+		margin: 0 auto 30px;
+		text-align: center;
+	}
+}
+
+/* 3つの好き
+--------------------------------------------------------------------*/
+.like__headline {
+	text-align: center;
+	margin: 80px 30px 40px;
+}
+
+.likeNav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 10px 0 40px;
+	margin: 0 auto;
+}
+
+.likeNav__item {
+	width: calc((100% / 3) + 30px);
+	background: #fff;
+	margin-right: 30px;
+}
+
+.likeNav__item img {
+	transform: scale(1.01);
+	width: 100%;
+}
+
+.likeNav__item__detail {
+	padding: 20px;
+}
+
+.likeNav__item__detail span {
+	display: block;
+	color: #00334f;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.likeNav__item a:hover {
+	color: #333;
+}
+
+/* サムネホバー */
+.likeTmb {
+	position: relative;
+}
+
+.likeNav__item:hover .likeTmb__hoverArea {
+	opacity: 1;
+}
+
+.likeTmb__hoverArea {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,51,79,0.6);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.likeTmb__hoverArea > div {
+
+	margin: 0 auto;
+	text-align: center;
+}
+
+.likeTmb__hoverArea > div span {
+	display: block;
+	line-height: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	.like__headline {
+		width: 70%;
+		margin: 40px auto 20px;
+	}
+
+	.likeNav {
+		display: block;
+		padding: 0 20px;;
+		position: relative;
+	}
+
+	.likeNav__item {
+		width: 100%;
+		background: #fff;
+		margin: 0 0 20px;
+	}
+
+	.likeTmb__hoverArea {
+		display: none;
+	}
+}
+
+
+/* fair
+--------------------------------------------------------------------*/
+.fair {
+	display: flex;
+	color: #fff;
+	overflow: hidden;
+}
+
+.fairBg {
+	width: 50%;
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/fair_bg.jpg) center / cover no-repeat;
+}
+
+.fair__detail {
+	width: 50%;
+	padding: 10% 40px 10% 50px;
+	color: #fff;
+	background: #14a0dc;
+}
+
+@media only screen and (max-width: 768px) {
+	.fair {
+		display: block;
+		color: #fff;
+	}
+
+	.fairBg {
+		width: 100%;
+		padding-top: 50%;
+		background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/fair_bg.jpg) center / cover no-repeat;
+	}
+
+	.fair__detail {
+		width: 100%;
+		padding: 40px 20px;
+		text-align: center;
+	}
+}
+
+
+/* voice
+--------------------------------------------------------------------*/
+.voice {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 100px 40px 120px;
+}
+
+.voice__detail {
+	display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+	.voice {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 40px 20px;
+		text-align: center;
+	}
+
+	.voice__detail {
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+/* Instagram
+--------------------------------------------------------------------*/
+.insta-area {
+	margin-bottom: 160px;
+}
+
+.insta-area__detail {
+	height: 360px;
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/instagram_bg.jpg) center repeat-x;
+	background-size: auto 360px;
+	display: flex;
+	justify-content: center;
+	flex-flow: row-reverse;
+}
+
+.insta-area__title {
+	height: 360px;
+	width: 600px;
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/campaign_bg.jpg) center no-repeat;
+	background-size: cover;
+	padding: 20px 36px;
+	position: relative;
+}
+
+.insta-area__title h3{
+	color: #FFF;
+    font-size: 22px;
+    line-height: 32px;
+    border-bottom: #FFF 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-left: 74px;
+}
+
+.insta-area__title h3::before{
+	content: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/Instagram_logo.png);
+    object-fit: cover;
+    position: absolute;
+    top: 48px;
+	left: 32px;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.insta-area__title p{
+	color: #FFF;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.insta-area {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 40px 0;
+	}
+
+	.insta-area .button{
+		margin: 30px auto 0;
+	}
+
+	.insta-area__detail {
+		height: auto;
+		margin-bottom: 30px;
+		background: none;
+		background-size: auto 297px;
+	}
+
+	.insta-area__title {
+		width: 100%;
+		height: auto;
+		background: none;
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.insta-area__title h3{
+		font-size: 16px;
+		line-height: 22px;
+		border-bottom: #FFF 1px solid;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		padding-left: 82px;
+	}
+
+	.insta-area__title p{
+		font-size: 14px;
+	}
+
+	.insta-area__title h3::before{
+		top: 25px;
+		left: 21px;
+	}
+}
+
+
+/* interview
+--------------------------------------------------------------------*/
+.interview {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	position: relative;
+}
+
+.interviewBg {
+	width: 50%;
+	margin: -40px 0 5vw;
+}
+
+.interview__detail {
+	width: 50%;
+	max-width: 600px;
+	padding: 0 40px 5vw 50px;
+	overflow: hidden;
+}
+
+.interview__detail::before {
+	content: "";
+	padding-top: 20%;
+	display: block;
+}
+
+@media only screen and (max-width: 768px) {
+	.interview {
+		display: block;
+		text-align: center;
+	}
+
+	.interviewBg {
+		width: 100%;
+		margin: 0;
+		padding: 40px 20px 0;
+	}
+
+	.interview__detail {
+		width: 100%;
+		max-width: 100%;
+		padding: 40px 20px 60px;
+	}
+
+	.interview__detail::before {
+		display: none;
+	}
+
+	.interview__detail p {
+		text-align: left;
+	}
+}
+
+
+/* data
+--------------------------------------------------------------------*/
+.data {
+	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/data_bg.jpg) center / cover no-repeat;
+	color: #fff;
+	padding: 90px 40px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.data {
+		display: none;
+	}
+}
+
+
+/* other
+--------------------------------------------------------------------*/
+.other {
+	padding: 90px 40px;
+}
+
+.otherNav {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.otherNav__item {
+	width: calc(50% - 15px);
+	text-align: center;
+	overflow: hidden;
+	line-height: 1;
+}
+
+.otherNav__item a {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 215px;
+	color: #fff;
+	position: relative;
+}
+
+.otherNav__item a::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: all 2s linear;
+	background-size: cover;
+}
+
+.otherNav__item a:hover::after {
+	transform: scale(1.2);
+}
+
+.otherNav__item--recruit a::after {
+	background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/other_bg_recruit.jpg);
+}
+
+.otherNav__item--profile a::after {
+	background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/other_bg_profile.jpg);
+}
+
+.otherNav__item div {
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.otherNav__item span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+	.other {
+		padding: 0;
+	}
+
+	.otherNav__item {
+		width: 50%;
+	}
+
+	.otherNav__item a {
+		min-height: 125px;
+	}
+}
