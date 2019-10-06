@@ -52,7 +52,7 @@
 	width: 10vw;
 	max-width: 135px;
 	height: 80px;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/ico_update.png) no-repeat center / 100%;
+	background: url(../img/ico_update.png) no-repeat center / 100%;
 	top: -70px;
 	left: 100%;
 }
@@ -72,7 +72,7 @@
 		max-width: 157px;
 		height: 45px;
 		margin-bottom: 10px;
-		background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_ico_update.png);
+		background-image: url(../../img/SP_ico_update.png);
 	}
 }
 
@@ -197,7 +197,7 @@
 }
 
 #video {
-	background: url('file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_poster.jpg') no-repeat;
+	background: url('../img/video_poster.jpg') no-repeat;
 	background-position: center center;
 	background-size: cover;
 	min-height: calc(100% - 75px);
@@ -207,24 +207,16 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
-    z-index:2000;
+
 	transform: translate(-50%, -50%);
 	animation: videoFadeIn 1.5s cubic-bezier(0.75, 0, 0.175, 1) forwards;
 }
 .cont{
- display:flex;
+ position: absolute;
  justify-content:center;
- margin: 20% 0 0;
- z-index:2001;
+ z-index:1;
+ top: 10%;
 }
-.cont-inner{
- width: 900px;
- padding: 1px;
- justify-content:center;
- color: #fff;
- z-index:2001;
-}
-
 @keyframes videoFadeIn {
 	0% { opacity: 0;}
 	100% { opacity: 1;}
@@ -244,7 +236,7 @@
 	width: 70px;
 	height: 70px;
 	border-radius: 100%;
-	background: #fff url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_ico_skip.gif) no-repeat center 15px;
+	background: #fff url(../img/video_ico_skip.gif) no-repeat center 15px;
 	text-align: center;
 	top: auto;
 	right: 0;
@@ -302,30 +294,30 @@
 	}
 
 	.spSlide__item--01 {
-		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main01.jpg");
+		background-image: url("../../img/SP_2020_main01.jpg");
 	}
 
 	.spSlide__item--02 {
-		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main02.jpg");
+		background-image: url("../../img/SP_2020_main02.jpg");
 	}
 
 	.spSlide__item--03 {
-		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main03.jpg");
+		background-image: url("../../img/SP_2020_main03.jpg");
 	}
 
 	.spSlide__item--04 {
-		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main04.jpg");
+		background-image: url("../../img/SP_2020_main04.jpg");
 	}
 
 	.spSlide__item--05 {
-		background-image: url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_2020_main05.jpg");
+		background-image: url("../../img/SP_2020_main05.jpg");
 	}
 
 	.videoArea__scroll > a {
 		width: 50px;
 		height: 50px;
 		border-radius: 100%;
-		background: #fff url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/video_ico_skip.gif) no-repeat center 10px / 15%;
+		background: #fff url(../img/video_ico_skip.gif) no-repeat center 10px / 15%;
 		bottom: 20px;
 		padding-top: 30px;
 		font-size: 1rem !important;
@@ -545,7 +537,7 @@
 /* コンセプト
 --------------------------------------------------------------------*/
 .concept2 {
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/concept_bg2.jpg) center top / cover no-repeat;
+	background: url(../../img/concept_bg2.jpg) center top / cover no-repeat;
 	color: #fff;
 	padding: 100px 0;
 	text-align: center;
@@ -587,7 +579,7 @@
 
 @media only screen and (max-width: 768px) {
 	.concept {
-		background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/SP_concept_bg.jpg) center / cover no-repeat;
+		background: url(../img/SP_concept_bg.jpg) center / cover no-repeat;
 		display: block;
 		margin-bottom: 0;
 		padding: 40px 0;
@@ -738,7 +730,7 @@
 
 .fairBg {
 	width: 50%;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/fair_bg.jpg) center / cover no-repeat;
+	background: url(../img/fair_bg.jpg) center / cover no-repeat;
 }
 
 .fair__detail {
@@ -757,7 +749,7 @@
 	.fairBg {
 		width: 100%;
 		padding-top: 50%;
-		background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/fair_bg.jpg) center / cover no-repeat;
+		background: url(../img/fair_bg.jpg) center / cover no-repeat;
 	}
 
 	.fair__detail {
@@ -802,7 +794,7 @@
 
 .insta-area__detail {
 	height: 360px;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/instagram_bg.jpg) center repeat-x;
+	background: url(../img/instagram_bg.jpg) center repeat-x;
 	background-size: auto 360px;
 	display: flex;
 	justify-content: center;
@@ -812,7 +804,7 @@
 .insta-area__title {
 	height: 360px;
 	width: 600px;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/campaign_bg.jpg) center no-repeat;
+	background: url(../img/campaign_bg.jpg) center no-repeat;
 	background-size: cover;
 	padding: 20px 36px;
 	position: relative;
@@ -829,7 +821,7 @@
 }
 
 .insta-area__title h3::before{
-	content: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/Instagram_logo.png);
+	content: url(../img/Instagram_logo.png);
     object-fit: cover;
     position: absolute;
     top: 48px;
@@ -948,7 +940,7 @@
 /* data
 --------------------------------------------------------------------*/
 .data {
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/data_bg.jpg) center / cover no-repeat;
+	background: url(../../img/data_bg.jpg) center / cover no-repeat;
 	color: #fff;
 	padding: 90px 40px;
 	text-align: center;
@@ -1008,11 +1000,11 @@
 }
 
 .otherNav__item--recruit a::after {
-	background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/other_bg_recruit.jpg);
+	background-image: url(../../img/other_bg_recruit.jpg);
 }
 
 .otherNav__item--profile a::after {
-	background-image: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/img/other_bg_profile.jpg);
+	background-image: url(../../img/other_bg_profile.jpg);
 }
 
 .otherNav__item div {
