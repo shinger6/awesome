@@ -296,6 +296,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1000px;
+	word-wrap: break-word;
 }
 
 .gNav01__item {
@@ -350,8 +351,8 @@ img {
 	display: block;
 	width: 6px;
 	height: 6px;
-	border-top: 2px solid #0c5b7d;
-	border-right: 2px solid #0c5b7d;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
 	background: none;
 	transform: rotate(45deg);
 	top: 0;
