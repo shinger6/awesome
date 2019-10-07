@@ -237,9 +237,6 @@ img {
 	.header__logo {
 		width: 65%;
 		max-width: 280px;
-		line-height: 65px;
-		margin-top: -5px;
-		padding: 0 10px;
 	}
 
 	.navBtn {

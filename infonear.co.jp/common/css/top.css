@@ -215,7 +215,16 @@
  position: absolute;
  justify-content:center;
  z-index:1;
- top: 10%;
+ top: 20%;
+ left: 0;
+ right: 0;
+ margin: auto;
+}
+.cont img {
+	position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 @keyframes videoFadeIn {
 	0% { opacity: 0;}
