@@ -5,19 +5,19 @@
 =================================================================== */
 
 /* リセット */
-@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/reset.css");
+@import url("./reset.css");
 
 /* 共通スタイル */
-@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/base.css");
+@import url("./base.css");
 
 /* レイアウト */
-@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/layout.css");
+@import url("./layout.css");
 
 /* モジュール */
-@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/css/module.css");
+@import url("./module.css");
 
 /* 共通フッターリンク */
-@import url("file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/_sitecommon/_css/footer-link.css");
+@import url("../../_sitecommon/_css/footer-link.css");
 
 /* フォント読み込み */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:500,600,700');

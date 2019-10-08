@@ -19,13 +19,13 @@ body {
 .wrapper {
 	position: relative;
 	width: 100%;
-	padding: 75px 0 0;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/bg.jpg);
+	padding: 0px;
+	background: url(../img/bg.jpg);
 }
 
 img {
 	max-width: 100%;
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .pc {
@@ -50,7 +50,7 @@ img {
 @media only screen and (max-width: 768px) {
 	.wrapper {
 		min-width: 100%;
-		padding: 60px 0 0;
+		padding: 0;
 	}
 
 	.pc {
@@ -84,7 +84,6 @@ img {
 
 .header__logo img {
 	width: 287px;
-	height: 1;
 }
 
 .header__entry > a {
@@ -124,6 +123,8 @@ img {
 
 /* menu */
 .navBtn {
+	top: 0;
+	right: 0;
 	display: flex;
 	width: 75px;
 	height: 75px;
@@ -236,12 +237,12 @@ img {
 	.header__logo {
 		width: 65%;
 		max-width: 280px;
-		line-height: 65px;
-		margin-top: -5px;
-		padding: 0 10px;
 	}
 
 	.navBtn {
+		position: absolute;
+		top: 0;
+		right: 0;
 		width: 60px;
 		height: 60px;
 	}
@@ -276,6 +277,7 @@ img {
 	justify-content: center;
 	display: none;
 	overflow: hidden;
+	z-index: 1;
 }
 
 .header__nav a {
@@ -291,6 +293,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1000px;
+	word-wrap: break-word;
 }
 
 .gNav01__item {
@@ -345,8 +348,8 @@ img {
 	display: block;
 	width: 6px;
 	height: 6px;
-	border-top: 2px solid #0c5b7d;
-	border-right: 2px solid #0c5b7d;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
 	background: none;
 	transform: rotate(45deg);
 	top: 0;
@@ -358,7 +361,7 @@ img {
 
 .gNav02__item--blank > a {
 	padding-right: 15px;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/blank_ico.png) no-repeat right 50%;
+	background: url(../img/blank_ico.png) no-repeat right 50%;
 }
 
 .gNav02__item--sns {
@@ -646,11 +649,11 @@ img {
 }
 
 .secBgGrid {
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/bg_grid.jpg);
+	background: url(../img/bg_grid.jpg);
 }
 
 .secBgBlue {
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/bg_blue.jpg);
+	background: url(../img/bg_blue.jpg);
 }
 
 .secInner {
@@ -668,8 +671,8 @@ img {
 @media only screen and (max-width: 768px) {
 	.contents--top {
 		background:
-			url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/bg_left.png) no-repeat left 0 top 68%,
-			url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/bg_right.png) no-repeat right 0 top 72%;
+			url(../img/bg_left.png) no-repeat left 0 top 68%,
+			url(../img/bg_right.png) no-repeat right 0 top 72%;
 		background-size: 70vw;
 		padding-bottom: 0;
 	}
@@ -852,7 +855,7 @@ img {
 /* フッターリンク */
 .footer {
 	width: 100%;
-	background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/footer_bg.jpg) no-repeat center top;
+	background: url(../img/footer_bg.jpg) no-repeat center top;
 	background-size: cover;
 }
 
@@ -893,7 +896,7 @@ img {
 }
 
 .footer__link__item > a {
-	color: #fff;
+	/* color: #fff; */
 	padding: 0 1em 0 14px;
 	position: relative;
 }
@@ -946,7 +949,7 @@ img {
 
 @media only screen and (max-width: 768px) {
 	.footer {
-		background: url(file:///Users/shinmuratoshimitsu/Desktop/infonear.co.jp/common/img/SP_footer_bg.jpg) no-repeat center top;
+		background: url(../img/SP_footer_bg.jpg) no-repeat center top;
 		padding: 0 20px;
 	}
 
