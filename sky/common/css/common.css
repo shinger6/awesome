@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* voice */
 /* ////////////////////////////////////////////////////////////////////
-	ëSëÃê›íË
+	ÔøΩSÔøΩÃê›íÔøΩ
 //////////////////////////////////////////////////////////////////// */
 /* ==================================================================
 	Reset
@@ -20,7 +20,7 @@ li {
 }
 
 /* ==================================================================
-	ã§í 
+	ÔøΩÔøΩÔøΩÔøΩ
 */
 a {
   text-decoration: none;
@@ -182,24 +182,24 @@ picture {
   font-family: 'Noto Sans JP';
   font-style: normal;
   font-weight: 300;
-  src: url(/common/font/NotoSansCJKjp-DemiLight.min.woff2) format("woff2");
-  src: url(/common/font/NotoSansCJKjp-DemiLight.min.woff) format("woff");
+  src: url(../font/NotoSansCJKjp-DemiLight.min.woff2) format("woff2");
+  src: url(../font/NotoSansCJKjp-DemiLight.min.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Noto Sans JP';
   font-style: normal;
   font-weight: 500;
-  src: url(/common/font/NotoSansCJKjp-Medium.min.woff2) format("woff2");
-  src: url(/common/font/NotoSansCJKjp-Medium.min.woff) format("woff");
+  src: url(../font/NotoSansCJKjp-Medium.min.woff2) format("woff2");
+  src: url(../font/NotoSansCJKjp-Medium.min.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Noto Sans JP';
   font-style: normal;
   font-weight: 700;
-  src: url(/common/font/NotoSansCJKjp-Bold.min.woff2) format("woff2");
-  src: url(/common/font/NotoSansCJKjp-Bold.min.woff) format("woff");
+  src: url(../font/NotoSansCJKjp-Bold.min.woff2) format("woff2");
+  src: url(../font/NotoSansCJKjp-Bold.min.woff) format("woff");
 }
 
 .en {
@@ -208,7 +208,7 @@ picture {
 }
 
 /* ==================================================================
-	ëSëÃ
+	ÔøΩSÔøΩÔøΩ
 */
 html, body {
   width: 100%;
@@ -217,7 +217,7 @@ html, body {
 }
 
 body {
-  font-family: "Noto Sans JP", "ÉÅÉCÉäÉI", "Hiragino Kaku Gothic ProN", "ÉqÉâÉMÉmäpÉS ProN W3", sans-serif;
+  font-family: "Noto Sans JP", "ÔøΩÔøΩÔøΩCÔøΩÔøΩÔøΩI", "Hiragino Kaku Gothic ProN", "ÔøΩqÔøΩÔøΩÔøΩMÔøΩmÔøΩpÔøΩS ProN W3", sans-serif;
   font-weight: 500;
   -webkit-text-size-adjust: 100%;
   font-size: 1.3rem;
@@ -1018,7 +1018,7 @@ body {
 
 .btnMore--blank a::before {
   padding-left: calc(2em + 12px) !important;
-  background: url(/common/img/btn_ico_blank.png) 1em 50%/12px no-repeat;
+  background: url(../img/btn_ico_blank.png) 1em 50%/12px no-repeat;
 }
 
 @media (min-width: 1024px) {
@@ -1181,11 +1181,11 @@ body {
 }
 
 .pagenation__item--prev a {
-  background: url(/common/img/bt_ico_arrowL.png) no-repeat center;
+  background: url(../img/bt_ico_arrowL.png) no-repeat center;
 }
 
 .pagenation__item--next a {
-  background: url(/common/img/bt_ico_arrowR.png) no-repeat center;
+  background: url(../img/bt_ico_arrowR.png) no-repeat center;
 }
 
 @media (min-width: 896px) {
@@ -1279,7 +1279,7 @@ body {
 }
 
 .entry {
-  background: url(/common/img/SP_entry_bg.jpg) center/cover no-repeat;
+  background: url(../img/SP_entry_bg.jpg) center/cover no-repeat;
   padding: 50px 20px;
   color: #fff;
   text-align: center;
@@ -1309,7 +1309,7 @@ body {
 @media (min-width: 1024px) {
   .entry {
     padding: 100px 10%;
-    background: url(/common/img/entry_bg.jpg) center/cover no-repeat;
+    background: url(../img/entry_bg.jpg) center/cover no-repeat;
   }
   .entry__copy {
     font-size: 30px;

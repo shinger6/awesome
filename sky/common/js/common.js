@@ -3,13 +3,13 @@
 //======================================================
 
 
-// ƒOƒ[ƒoƒ‹ƒiƒr
+// ï¿½Oï¿½ï¿½ï¿½[ï¿½oï¿½ï¿½ï¿½iï¿½r
 // -------------------------------------------------------------------
 var sizeType = 0;
 
 var widthJudge = function () {
 	if (mediaWidth(895)) {
-		if (sizeType != 2) { // SP‚Ìˆ—
+		if (sizeType != 2) { // SPï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½
 			pagetop();
 			$('.subNav').hide();
 			$('.spNavWrapp').remove();
@@ -19,7 +19,7 @@ var widthJudge = function () {
 		}
 		sizeType = 2;
 	} else {
-		if (sizeType != 1) { // PC‚Ìˆ—
+		if (sizeType != 1) { // PCï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½
 			pagetop();
 			$('.subNav').show();
 			$('.spNavWrapp').remove();
@@ -31,14 +31,14 @@ var widthJudge = function () {
 	}
 };
 
-// ƒy[ƒW‚Ìæ“ª‚Ö
+// ï¿½yï¿½[ï¿½Wï¿½Ìæ“ªï¿½ï¿½
 // -------------------------------------------------------------------
 var pagetop = function () {
 	$(window).scroll(function () {
-		var documentH = $(document).height(); //ƒhƒLƒ…ƒƒ“ƒg‚Ì‚‚³
-		var topPos = $(window).scrollTop(); //ƒgƒbƒv‚©‚ç‚Ì‹——£
-		var btnPos = $(window).height() + $(window).scrollTop();// Œ»İ’n
-		var footerH = $('.footer').innerHeight();// ƒtƒbƒ^[‚Ì‚‚³
+		var documentH = $(document).height(); //ï¿½hï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ìï¿½ï¿½ï¿½
+		var topPos = $(window).scrollTop(); //ï¿½gï¿½bï¿½vï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
+		var btnPos = $(window).height() + $(window).scrollTop();// ï¿½ï¿½ï¿½İ’n
+		var footerH = $('.footer').innerHeight();// ï¿½tï¿½bï¿½^ï¿½[ï¿½Ìï¿½ï¿½ï¿½
 		if (topPos > 50) {
 			$('.pagetop').fadeIn();
 			if (documentH - btnPos <= footerH && sizeType === 1) {
@@ -59,7 +59,7 @@ var pagetop = function () {
 };
 
 
-// ƒXƒNƒ[ƒ‹‚µ‚½‚ç•\¦
+// ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½
 // -------------------------------------------------------------------
 var scrollFadeIn = function () {
 	var scrollSize;
@@ -72,12 +72,12 @@ var scrollFadeIn = function () {
 	}
 
 	function fadeElement(){
-		//‰‰ñ“Ç‚İ‚İ•ƒXƒNƒ[ƒ‹‚·‚é“x‚É–ˆ‰ñ‚Ü‚í‚·
+		//ï¿½ï¿½ï¿½ï¿½Ç‚İï¿½ï¿½İï¿½ï¿½ï¿½ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½É–ï¿½ï¿½ï¿½Ü‚í‚·
 		var element = $(".fadeIn:not(.fadeIn__on):visible");
 		var i = 0;
 		element.each(function() {
-			var objPos = $(this).offset().top; //TOP‚©‚ç‚Ì‹——£
-			var scroll = $(window).scrollTop(); //ƒXƒNƒ[ƒ‹‚µ‚½‹——£
+			var objPos = $(this).offset().top; //TOPï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½
+			var scroll = $(window).scrollTop(); //ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			var winHeight = $(window).height();
 			if (scroll > (objPos - winHeight + scrollSize)) {
 				$(this).delay(i * 100).queue(function () {
@@ -89,7 +89,7 @@ var scrollFadeIn = function () {
 	}
 	fadeElement();
 	$(window).scroll(function () {
-		// ƒZƒŒƒNƒ^o‚é‚½‚Ñ‚ÉÀs
+		// ï¿½Zï¿½ï¿½ï¿½Nï¿½^ï¿½oï¿½é‚½ï¿½Ñ‚Éï¿½ï¿½s
 		fadeElement();
 	});
 };
@@ -110,21 +110,22 @@ var mediaWidth = function(checkWidth){
 		}
 	}
 }
-// ƒAƒ“ƒJ[ˆ—
+// ï¿½Aï¿½ï¿½ï¿½Jï¿½[ï¿½ï¿½ï¿½ï¿½
 //-------------------------------------------------------------------
 var pageAnchor = function () {
 	var windowW = $(window).width();
-	var bp = 767; // ƒuƒŒƒCƒNƒ|ƒCƒ“ƒg
+	var bp = 767; // ï¿½uï¿½ï¿½ï¿½Cï¿½Nï¿½|ï¿½Cï¿½ï¿½ï¿½g
 	if (windowW <= bp) {
-		var headerHight = 60; // SPƒwƒbƒ_‚‚³
+		var headerHight = 60; // SPï¿½wï¿½bï¿½_ï¿½ï¿½ï¿½ï¿½
 	} else {
-		var headerHight = 0; // PCƒwƒbƒ_‚‚³
+		var headerHight = 0; // PCï¿½wï¿½bï¿½_ï¿½ï¿½ï¿½ï¿½
 	}
 	$('a[href^="#"]').click(function() {
 		var href= $(this).attr("href");
 		var target = $(href == "#" || href == "" ? 'html' : href);
+		target = target.offset() ? target : $(".wrapper");
 		var position = target.offset().top-headerHight;
-		$('body,html').animate({ 'scrollTop': position }, 0);
+		$('body,html').animate({ 'scrollTop': position }, 400);
 		return false;
 	});
 }
@@ -132,9 +133,9 @@ var pageAnchor = function () {
 $(function () {
 	var nav = $('.nav'),
 		spNavBtn = $('.spNavBtn'),
-		gNavItem = $('.gNav__item'),//ƒOƒ[ƒoƒ‹ƒrƒŠƒ“ƒN
-		subNav = $('.subNav'),// ƒTƒuƒiƒrƒGƒŠƒA
-		subNavItem = $('.subNav__item'),//ƒTƒuƒiƒrƒŠƒ“ƒN
+		gNavItem = $('.gNav__item'),//ï¿½Oï¿½ï¿½ï¿½[ï¿½oï¿½ï¿½ï¿½rï¿½ï¿½ï¿½ï¿½ï¿½N
+		subNav = $('.subNav'),// ï¿½Tï¿½uï¿½iï¿½rï¿½Gï¿½ï¿½ï¿½A
+		subNavItem = $('.subNav__item'),//ï¿½Tï¿½uï¿½iï¿½rï¿½ï¿½ï¿½ï¿½ï¿½N
 		flag = false;
 		//load and resize.
 	$(window).bind('load resize', function () {
@@ -143,7 +144,7 @@ $(function () {
 		// scrollFadeIn();
 	});
 
-	// yPCzƒOƒ[ƒoƒ‹‚ÌŠJ•Âˆ—‚Æƒzƒo[‚Ìˆ—
+	// ï¿½yPCï¿½zï¿½Oï¿½ï¿½ï¿½[ï¿½oï¿½ï¿½ï¿½ÌŠJï¿½Âï¿½ï¿½ï¿½ï¿½Æƒzï¿½oï¿½[ï¿½Ìï¿½ï¿½ï¿½
 	//-------------------------------------------------------------------
 	gNavItem.hover(function () {
 		if (!flag && !mediaWidth(895)) {
@@ -174,7 +175,7 @@ $(function () {
 		}
 	});
 
-	// ySPzƒOƒ[ƒoƒ‹‚ÌŠJ•Âˆ—
+	// ï¿½ySPï¿½zï¿½Oï¿½ï¿½ï¿½[ï¿½oï¿½ï¿½ï¿½ÌŠJï¿½Âï¿½ï¿½ï¿½
 	//-------------------------------------------------------------------
 	spNavBtn.stop(true, false).on("click", function () {
 		var h = $(window).outerHeight();
@@ -199,7 +200,7 @@ $(function () {
 		}
 	});
 
-	//SP‚Ì‘æ“ñŠK‘wŠJ•Â
+	//SPï¿½ï¿½ï¿½Ì‘ï¿½ï¿½Kï¿½wï¿½Jï¿½ï¿½
 	$('.gNav__item__icon').stop().on('click', function (e) {
 		if (!$(this).hasClass('gNav__item__ico--open')) {
 			$(this).addClass('gNav__item__ico--open');
@@ -217,7 +218,7 @@ $(function () {
 
 // -------------------------------------------------------------------
 
-//V“üĞˆõ‚Ìº‚Ìcookie‚ğÁ‚·
+//ï¿½Vï¿½ï¿½ï¿½Ğˆï¿½ï¿½Ìï¿½ï¿½ï¿½cookieï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 // $(function () {
 // 	if (!location.pathname.match(/\/person\/voice/)) {
 // 		$.removeCookie('offset',{ path: "/" });

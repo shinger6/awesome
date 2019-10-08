@@ -11,7 +11,7 @@
 }
 
 .mv__inner #video {
-  background: #fff url("/img/SP_video_poster.jpg") center/cover no-repeat;
+  background: #fff url("../../img/SP_video_poster.jpg") center/cover no-repeat;
   background-position: center center;
   background-size: cover;
   height: 133vw;
@@ -79,7 +79,7 @@
     min-width: 100%;
     width: 177.77777778vh;
     /* 16:9 = 177.77% */
-    background: #fff url("/img/video_poster.jpg") center/cover no-repeat;
+    background: #fff url("../../img/video_poster.jpg") center/cover no-repeat;
   }
 }
 
@@ -139,7 +139,7 @@
 }
 
 .concept {
-  background: url(/img/SP_concept_bg.jpg) center/cover no-repeat;
+  background: url(../../img/SP_concept_bg.jpg) center/cover no-repeat;
   padding: 60px 30px;
   color: #fff;
   margin-bottom: 40px;
@@ -168,7 +168,7 @@
 
 @media (min-width: 1024px) {
   .concept {
-    background: url(/img/concept_bg.jpg) center/cover no-repeat;
+    background: url(../../img/concept_bg.jpg) center/cover no-repeat;
     text-align: center;
     padding: 100px 10%;
     margin-bottom: 100px;
@@ -229,7 +229,7 @@
 }
 
 .data {
-  background: url(/img/SP_data_bg.jpg) center/cover no-repeat;
+  background: url(../../img/SP_data_bg.jpg) center/cover no-repeat;
   padding: 40px 20px;
   text-align: center;
   margin-bottom: 40px;
@@ -308,22 +308,22 @@
 }
 
 .interviewList__item__detail--engineer::before {
-  content: "äJî≠";
+  content: "ÔøΩJÔøΩÔøΩ";
   background: #0985c8;
 }
 
 .interviewList__item__detail--sales::before {
-  content: "âcã∆";
+  content: "ÔøΩcÔøΩÔøΩ";
   background: #e48e37;
 }
 
 .interviewList__item__detail--staff::before {
-  content: "éññ±";
+  content: "ÔøΩÔøΩÔøΩÔøΩ";
   background: #a971d3;
 }
 
 .interviewList__item__detail--support::before {
-  content: "ÉTÉ|Å[Ég";
+  content: "ÔøΩTÔøΩ|ÔøΩ[ÔøΩg";
   background: #efd93b;
 }
 
@@ -394,14 +394,14 @@
 }
 
 .voice {
-  background: url(/img/SP_voice_bg.jpg) center top/cover no-repeat;
+  background: url(../../img/SP_voice_bg.jpg) center top/cover no-repeat;
   padding: 60px 20px;
   margin-bottom: 40px;
 }
 
 @media (min-width: 1024px) {
   .voice {
-    background: url(/img/voice_bg.jpg) center top/cover no-repeat;
+    background: url(../../img/voice_bg.jpg) center top/cover no-repeat;
     margin: 0 5% 100px;
     padding: 0 10% 7%;
     position: relative;
@@ -414,13 +414,13 @@
 }
 
 .environment {
-  background: url(/img/SP_environment_bg.jpg) center/cover no-repeat;
+  background: url(../../img/SP_environment_bg.jpg) center/cover no-repeat;
   padding: 40px 20px;
 }
 
 @media (min-width: 1024px) {
   .environment {
-    background: url(/img/environment_bg.jpg) center/cover no-repeat;
+    background: url(../../img/environment_bg.jpg) center/cover no-repeat;
     padding: 100px 10%;
     max-width: 100%;
     margin-bottom: 0;
@@ -490,14 +490,14 @@
 
 @media (min-width: 1024px) {
   .sns {
-    background: url(/img/sns_bg.jpg) center/cover no-repeat;
+    background: url(../../img/sns_bg.jpg) center/cover no-repeat;
     text-align: center;
     position: relative;
     margin-bottom: 100px;
   }
   .sns__inner {
     max-width: 600px;
-    background: url(/img/campaign_bg.jpg) center/cover no-repeat;
+    background: url(../../img/campaign_bg.jpg) center/cover no-repeat;
     padding: 40px;
     margin: 0 auto;
   }
